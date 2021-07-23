@@ -363,7 +363,7 @@ h6 {
 #equal {
     background-color: rgb(99, 98, 173);
 }
-#shift, #stat, #deg, #rad, #mean, #median, #mode, #range, #var, #sd {
+#shift, #stat, #deg, #rad, #mean, #median, #mode, #range, #var, #sd, #clr {
   pointer-events:none;
 }
 
@@ -397,6 +397,7 @@ h6 {
     -ms-border-radius: 8px 8px 11px 11px;
     -o-border-radius: 8px 8px 11px 11px;
     cursor:pointer;
+    pointer-events: all;
 }
 
 
@@ -485,5 +486,13 @@ a:hover {
 @media (max-width: 340px){
   .container {
       width: 90%;
+  }
+}
+
+
+
+@media (max-width: 540px){
+  .mainContainer {
+      padding-top: 10px;
   }
 }
