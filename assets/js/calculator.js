@@ -1,5 +1,13 @@
-//Animate app on start up
-gsap.from('.container', {duration: 2.5, opacity: 0, stagger: 0.5, y: 500}) ;
+//Set media query for animating on larger screens
+const animating = (x) => {
+    if (x.matches) {  //If media query matches
+        //Animate app on start up
+        gsap.from('.container', {duration: 2.5, opacity: 0, stagger: 0.5, y: 500}) ;
+    }
+}
+let x = window.matchMedia("(min-width: 768px)")
+animating(x)  //call listener function at run time
+x.addListener(animating); //Attach listener function on state change
 
 
 //Toggle between scientific and simple mode stylesheets 
@@ -279,7 +287,7 @@ const clr = () => {
 //Function ON
 const on = () => {
     //enable click events on shift,stat, deg, and rad buttons
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < button.length; i++) {
         button[i].style.pointerEvents = "all" ;
     }
 
@@ -1101,7 +1109,7 @@ const equal = () => {
         display.innerHTML =  answer.innerHTML = (Number(display.innerHTML)).toExponential(7) ;
     }
     else if (display.innerHTML.includes(".") && ((display.innerHTML).length >= 14)) {
-        display.innerHTML =  answer.innerHTML = (Number(display.innerHTML)).toFixed(11) ;
+        display.innerHTML =  answer.innerHTML = (Number(display.innerHTML)).toFixed(9) ;
     }
     else if ((display.innerHTML).length >= 14) {
         display.innerHTML =  answer.innerHTML = (Number(display.innerHTML.substring(0, 13))) ;
