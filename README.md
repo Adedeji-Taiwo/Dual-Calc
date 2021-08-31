@@ -34,7 +34,6 @@ A Calculator in Simple and Scientific Modes with Basic Statistical Functions.
 - [Dribble](https://dribbble.com/)
 - [Font Awesome](https://fontawesome.com/)
 - [Gsap](https://greensock.com) 
-- [Font Awesome](https://fontawesome.com/)
 
 
 ## Contact
