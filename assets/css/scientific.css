@@ -146,7 +146,6 @@ input:checked + .slider:before {
 
 .container .screen #screen-box {
   font-size: 30px;
-  overflow-y: auto;
   text-align: right;
   margin: 0;
   padding: 7px;
@@ -163,8 +162,9 @@ input:checked + .slider:before {
   -o-border-radius: 6px;
   position: relative;
   user-select: none;
-  
+  overflow: hidden;
 }
+
 
 
 #modes {
@@ -200,6 +200,12 @@ span#degDisplay, span#radDisplay, span#shiftDisplay, span#statDisplay {
 #input {
   position: absolute;
   height: 70px;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+#input::-webkit-scrollbar {
+  display: none;
 }
 
 #inputs {

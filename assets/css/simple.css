@@ -133,17 +133,17 @@ input:checked + .slider:before {
   padding: 18px;
   margin-left: auto;
   margin-right: auto;
-  -webkit-border-radius:;
-  -moz-border-radius:;
-  -ms-border-radius:;
-  -o-border-radius:;
+  -webkit-border-radius: 10px 10px 7px 7px;
+  -moz-border-radius: 10px 10px 7px 7px;
+  -ms-border-radius: 10px 10px 7px 7px;
+  -o-border-radius: 10px 10px 7px 7px;
   position: relative;
   right: 1.5px;
 }
 
 .container .screen #screen-box {
   font-size: 30px;
-  overflow-y: auto;
+  overflow: hidden;
   text-align: right;
   margin: 0;
   padding: 7px;
@@ -196,8 +196,13 @@ span#degDisplay, span#radDisplay, span#shiftDisplay, span#statDisplay {
 #input {
   position: absolute;
   height: 70px;
+  overflow: auto;
+  white-space: nowrap;
 }
 
+#input::-webkit-scrollbar {
+  display: none;
+}
 #inputs {
   font-family: 'Scientific Calculator LCD', monospace;
   font-size: 21px;
